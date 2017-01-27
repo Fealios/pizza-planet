@@ -14,7 +14,9 @@
     </div>
     <div id="order" class="row">
       <div id="formcontainer" class="col-sm-5">
+
         <form id="pizzaOrder">
+
           <div id="sizeSelector" class="container">
             <select id="sizeChoice" class="size">
               <option value="small">Small</option>
@@ -22,6 +24,7 @@
               <option value="large">Large</option>
             </select>
           </div>
+
           <div id="toppingsOrder" class="container">
             <ul>
               <li id="cheeseOnly"><label><input type="checkbox" name="toppings" value="cheese">Plain Cheese</label></li>
@@ -32,16 +35,26 @@
               <li><label><input type="checkbox" name="toppings" value="bacon">Bacon</label></li>
             </ul>
           </div>
-          <button type="submit">Add Pizza</button>
+
+          <div id="deliveryChoice">Is this for Delivery?
+            <button id="yesButton" type="button">Yes</button>
+            <button id="noButton" type="button">No</button>
+          </div>
+
           <div id="deliveryOptions" class="container">
             <label>Enter your address:</label>
-            <input type="text">
+            <input id="address" type="text">
           </div>
+
+          <button type="submit">Add Pizza</button>
+
         </form>
+
         <button id="showReceipt" type="button">Submit Order</button>
       </div>
       <div id="receipt" class="col-sm-4">
 
+        <p><h3>Total cost:</h3></p>
         <span id="totalCost">Hello</span>
       </div>
     </div>

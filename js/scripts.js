@@ -3,7 +3,8 @@ var toppingsInput = [];
 var sizeInput;
 var orderCounter = 0;
 var allCost = 0;
-
+var delivery = false;
+var address;
 function Pizza(toppings, size){
   this.toppings = toppings; //this will be an array
   this.size = size; //this will be a string
@@ -37,9 +38,6 @@ Pizza.prototype.pushPizzas = function(){
 
 
 $(document).ready(function(){
-
-
-
   $('#pizzaOrder').submit(function(event){ //begin pizza order form=====
     $(this).off("click");
     orderCounter++;
@@ -59,8 +57,19 @@ $(document).ready(function(){
   $('#showReceipt').click(function(){
     $('#receipt').show();
     $(this).off("click");
+    $('#formcontainer').hide();
+    if(delivery){
+      address = $('#address').val();
+      $('#receipt').append("Your address is:" + address);
+    }
   })
 
+  $('#yesButton').click(function(){
+    delivery = true;
+    allCost += 5;
+    $('#deliveryChoice').hide();
+    $('#deliveryOptions').show();
+  });
 
   function displayReceipt(){
     console.log('in the function');
@@ -68,8 +77,8 @@ $(document).ready(function(){
     for(i=0;i<newOrder.toppings.length;i++){
       $('#'+orderCounter).append("<li>"+newOrder.toppings[i]+"</li>");
     }
-    $('#'+orderCounter).append("<span class='sizeReceipt'>"+sizeInput+"</span>");
-    $('#totalCost').text(allCost);
+    $('#'+orderCounter).append("<span class='sizeReceipt'> SIZE: "+sizeInput+"</span>");
+    $('#totalCost').text("$"+allCost +".00");
   }
 
 
