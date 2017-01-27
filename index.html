@@ -9,28 +9,36 @@
     <title>Pizza Planet</title>
   </head>
   <body>
-    <div class="container">
-      <form id="pizzaOrder">
-        <div id="sizeSelector" class="container">
-          <select id="sizeChoice" class="size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+    <div id="order" class="row">
+      <div id="formcontainer" class="col-sm-6">
+        <form id="pizzaOrder">
+          <div id="sizeSelector" class="container">
+            <select id="sizeChoice" class="size">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <div id="toppingsOrder" class="container">
+            <ul>
+              <li><label><input type="checkbox" name="toppings" value="cheese">Plain Cheese</label></li>
+              <li><label><input type="checkbox" name="toppings" value="pepperoni">Pepperoni</label></li>
+              <li><label><input type="checkbox" name="toppings" value="sausage">Sausage</label></li>
+              <li><label><input type="checkbox" name="toppings" value="onions">Onions</label></li>
+              <li><label><input type="checkbox" name="toppings" value="peppers">Peppers</label></li>
+              <li><label><input type="checkbox" name="toppings" value="bacon">Bacon</label></li>
+            </ul>
+          </div>
+          <button type="submit">Submit Order</button>
+          <div id="deliveryOptions" class="container">
+            <label>Enter your address:</label>
+            <input type="text">
+          </div>
+        </form>
+      </div>
+      <div id="receipt" class="col-sm-6">
 
-          </select>
-        </div>
-        <div id="toppingsOrder" class="container">
-          <ul>
-            <li><label><input type="checkbox" name="toppings" value="cheese">Just Cheese</label></li>
-            <li><label><input type="checkbox" name="toppings" value="pepperoni">Pepperoni</label></li>
-            <li><label><input type="checkbox" name="toppings" value="sausage">Sausage</label></li>
-            <li><label><input type="checkbox" name="toppings" value="onions">Onions</label></li>
-            <li><label><input type="checkbox" name="toppings" value="peppers">Peppers</label></li>
-            <li><label><input type="checkbox" name="toppings" value="bacon">Bacon</label></li>
-          </ul>
-        </div>
-        <button type="submit">Submit Order</button>
-      </form>
+      </div>
     </div>
   </body>
 </html>
