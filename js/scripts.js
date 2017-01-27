@@ -2,13 +2,12 @@ var newOrder;
 var toppingsInput = [];
 var sizeInput;
 var orderCounter = 0;
-// var allCost = 0;
+var allCost = 0;
 
 function Pizza(toppings, size){
   this.toppings = toppings; //this will be an array
   this.size = size; //this will be a string
   this.cost = 6;
-  this.delivery = false;
 }
 
 Pizza.prototype.checkCost = function(){ //totals cost based on toppings and size
@@ -38,21 +37,29 @@ Pizza.prototype.pushPizzas = function(){
 
 
 $(document).ready(function(){
-  $('#pizzaOrder').submit(function(event){
+
+
+
+  $('#pizzaOrder').submit(function(event){ //begin pizza order form=====
     $(this).off("click");
     orderCounter++;
     event.preventDefault();
     toppingsInput=[];
+    sizeInput;
     sizeInput = ($('#sizeChoice option:selected').val());
     $('input:checkbox[name=toppings]:checked').each(function(){
       toppingsInput.push($(this).val())
     });
     newOrder = new Pizza(toppingsInput, sizeInput);
     newOrder.checkCost();
-    // newOrder.pushPIzzas();
+    newOrder.pushPizzas();
     displayReceipt();
-  }) //end form submit
+  }) //end form submit ======================================
 
+  $('#showReceipt').click(function(){
+    $('#receipt').show();
+    $(this).off("click");
+  })
 
 
   function displayReceipt(){
@@ -61,6 +68,8 @@ $(document).ready(function(){
     for(i=0;i<newOrder.toppings.length;i++){
       $('#'+orderCounter).append("<li>"+newOrder.toppings[i]+"</li>");
     }
+    $('#'+orderCounter).append("<span class='sizeReceipt'>"+sizeInput+"</span>");
+    $('#totalCost').text(allCost);
   }
 
 

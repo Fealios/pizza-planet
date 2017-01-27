@@ -9,8 +9,11 @@
     <title>Pizza Planet</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1>Welcome to Pizza Planet</h1>
+    </div>
     <div id="order" class="row">
-      <div id="formcontainer" class="col-sm-6">
+      <div id="formcontainer" class="col-sm-5">
         <form id="pizzaOrder">
           <div id="sizeSelector" class="container">
             <select id="sizeChoice" class="size">
@@ -21,7 +24,7 @@
           </div>
           <div id="toppingsOrder" class="container">
             <ul>
-              <li><label><input type="checkbox" name="toppings" value="cheese">Plain Cheese</label></li>
+              <li id="cheeseOnly"><label><input type="checkbox" name="toppings" value="cheese">Plain Cheese</label></li>
               <li><label><input type="checkbox" name="toppings" value="pepperoni">Pepperoni</label></li>
               <li><label><input type="checkbox" name="toppings" value="sausage">Sausage</label></li>
               <li><label><input type="checkbox" name="toppings" value="onions">Onions</label></li>
@@ -29,15 +32,17 @@
               <li><label><input type="checkbox" name="toppings" value="bacon">Bacon</label></li>
             </ul>
           </div>
-          <button type="submit">Submit Order</button>
+          <button type="submit">Add Pizza</button>
           <div id="deliveryOptions" class="container">
             <label>Enter your address:</label>
             <input type="text">
           </div>
         </form>
+        <button id="showReceipt" type="button">Submit Order</button>
       </div>
-      <div id="receipt" class="col-sm-6">
-        
+      <div id="receipt" class="col-sm-4">
+
+        <span id="totalCost">Hello</span>
       </div>
     </div>
   </body>

@@ -1,3 +1,11 @@
+#order {
+  width: 60%;
+}
+
+#receipt {
+  display: none;
+}
+
 ul {
-  border: solid;
+  list-style: none;
 }
