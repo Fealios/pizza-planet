@@ -82,7 +82,7 @@ $(document).ready(function(){
       $('#'+orderCounter).append("<li>"+newOrder.toppings[i]+"</li>");
     }
     $('#'+orderCounter).append("<span class='sizeReceipt'> SIZE: "+sizeInput+"</span>");
-    $('#totalCost').text("$"+allCost +".00");
+    $('#totalCost').text("$"+allCost);
   }
 
 
