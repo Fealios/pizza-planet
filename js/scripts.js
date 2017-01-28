@@ -75,6 +75,10 @@ $(document).ready(function(){
     $('#deliveryOptions').show();
   });
 
+  $('#noButton').click(function(){
+    $('#deliveryChoice').hide();
+  })
+
   function displayReceipt(){
     console.log('in the function');
     $('#receipt').append("<ul id='"+orderCounter+"'></ul>");
