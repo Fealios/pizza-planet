@@ -51,6 +51,9 @@ $(document).ready(function(){
     newOrder = new Pizza(toppingsInput, sizeInput);
     newOrder.checkCost();
     newOrder.pushPizzas();
+    $('input:checkbox[name=toppings]').each(function(){
+      $(this).prop("checked", false);
+    })
     displayReceipt();
   }) //end form submit ======================================
 
@@ -60,8 +63,9 @@ $(document).ready(function(){
     $('#formcontainer').hide();
     if(delivery){
       address = $('#address').val();
-      $('#receipt').append("Your address is:" + address);
+      $('#receipt').append("Your address is: " + address);
     }
+    $('#address').val("");
   })
 
   $('#yesButton').click(function(){

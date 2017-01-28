@@ -1,5 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Atomic+Age');
+
 #order {
   width: 60%;
+}
+
+#showReceipt{
+  margin-top: 30px;
+}
+
+form {
+  border-color: #AE2F1C;
+  border-bottom: dashed;
+  margin-left: -30px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+body{
+  background-color: #C9E6F4;
 }
 
 #deliveryOptions {
@@ -8,6 +31,7 @@
 
 #receipt {
   display: none;
+  margin-left: 100px;
 }
 
 ul {
@@ -15,15 +39,29 @@ ul {
 }
 
 #formcontainer {
-  border: solid;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  margin-left: 100px;
 }
 
 #deliveryChoice {
-  border: solid;
   margin: 0px 0px 15px 30px;
 }
 
 #deliveryChoice button{
   margin: 5px;
   /*background-color: pink;*/
+}
+
+.btn {
+  color: white;
+  font-size: 25px;
+  background-color: #AE2F1C
+}
+
+.jumbotron {
+  padding-left: 100px;
+  font-family: 'Atomic Age', cursive;
+  background-color: #211B37;
+  color: #1B9411;
 }
