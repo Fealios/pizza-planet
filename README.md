@@ -1,4 +1,14 @@
-SPECS:
+# Project: Pizza Planet
+### description:
+######  Pizza Planet is an independent project created and designed by Melvin Gruschow 1/27/2017 for the Week 4 Epicodus Code Review Project
+
+#### Installation:
+  No installation is required if viewing this via browser
+
+### Copy write: Melvin Gruschow, January 27, 2017
+
+
+## SPECS:
   User may Select a size of pizza and it will be relevant to the cost of their order:
     Pizza auto size: small  default cost: 6$
     Pizza size: medium      pizza cost: 8$
